@@ -6,6 +6,12 @@ import { data } from "../data/data";
 
 export function lowMoonsPlanets(data) {
   // Your code goes here...
+
+  return data.planets.filter((planet) => planet.moons && planet.moons.length < 10).map((filteredPlanet) => filteredPlanet.name);
+
+  // Except, based on the wording above, I believe the answer should actually be the line below:
+
+  // return data.planets.filter((planet) => !planet.moons || planet.moons.length < 10).map((filteredPlanet) => filteredPlanet.name);
 }
 
 

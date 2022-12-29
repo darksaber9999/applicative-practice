@@ -1,4 +1,5 @@
 import { data } from "../data/data";
+import { getAllAverageTemperatures } from "./e3";
 
 // SPACE DATA EXERCISE 13
 // Return the average temperature of all the Planets
@@ -6,6 +7,7 @@ import { data } from "../data/data";
 
 export function getAveragePlanetsTemperature(data) {
   // Your code goes here...
+  return getAllAverageTemperatures(data).reduce((acc, value) => acc + value) / getAllAverageTemperatures(data).length;
 }
 
 
